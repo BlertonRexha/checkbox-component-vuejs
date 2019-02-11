@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+
 import CheckBox from '@/components/CheckBox.vue'
 
 export default {

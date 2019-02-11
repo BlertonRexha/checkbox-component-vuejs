@@ -1,7 +1,7 @@
 <template>
     <label class="checkbox-item">
         <input type="checkbox" :checked="value" @change="$emit('input', $event.target.checked)" class="checkbox-input">
-        <span class="checkmark">
+        <span class="check-span">
             <slot></slot>
         </span>
     </label>
@@ -34,7 +34,7 @@ export default {
     width: 0;
 }
 
-.checkmark {
+.check-span {
     position: absolute;
     top: 0;
     left: 0;
@@ -43,33 +43,33 @@ export default {
     border-radius: 3px;
 }
 
-.checkbox-item:hover input~.checkmark {
+.checkbox-item:hover input~.check-span {
     background-color: #fdfdfd;
     border: 1px solid #2196F3;
 }
 
-.checkbox-item input~.checkmark {
+.checkbox-item input~.check-span {
     transition: 0.3s all;
     border: 1px solid #d4d4d4;
 }
 
-.checkbox-item input:checked~.checkmark {
+.checkbox-item input:checked~.check-span {
     background-color: #2196F3;
     border: 1px solid #2196F3;
 
 }
 
-.checkmark:after {
+.check-span:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-.checkbox-item input:checked~.checkmark:after {
+.checkbox-item input:checked~.check-span:after {
     display: block;
 }
 
-.checkbox-item .checkmark:after {
+.checkbox-item .check-span:after {
     left: 5px;
     top: 0px;
     width: 3px;
